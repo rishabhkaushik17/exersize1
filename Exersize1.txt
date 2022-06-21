@@ -75,8 +75,8 @@ Name : Rishabh Kaushik
 11. create branches called "feature1" and "feature2" from master. 11 . Delete branch "feature2".
     
     git branch feature1
-    2899  git branch feature2
-    2900  git branch -d feature2
+    git branch feature2
+    git branch -d feature2
     
 12. Make some commits on "feature1".
     
@@ -101,7 +101,7 @@ Name : Rishabh Kaushik
     
 15. Make some commits on "feature2".
     
-    git checkout feature2
+    git checkout -b feature2
     touch feature2
     nano file3.txt
     git commit -a -m "Changed file3 in feature2"
@@ -124,8 +124,11 @@ Name : Rishabh Kaushik
     nano file3.txt
     git add .
     git status
-    git commit -m "Rebased master"git status
     git rebase --continue
+    gitk
+
+18. Find the differences between "merge" and "rebase"
+    The difference between merge and rebase is that while merge preserves history as it happened, rebase rewrites it. Merge command integrates two branches into a single branch. Rebase command combines the sequence of commit to a new base commit that provides easier visualization of feature branching workflow.
        
 19. Use git stash
     
